@@ -1,1 +1,1 @@
-console.log("Check me out!");
+document.getElementById("content").appendChild(function(){const e=document.createElement("nav");return e.id="navbar",e}()),navArr=["home","about","contact"],function(e){const t=document.getElementById("navbar");for(i=0;i<e.length;i++)temp=document.createElement("div"),temp.className="tab",temp.id=e[i],temp.innerHTML=e[i],t.appendChild(temp)}(navArr);
