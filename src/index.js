@@ -1,4 +1,4 @@
-import './style.css';
+import './styles/index_style.css';
 import home from './home.js';
 
 const content = document.createElement('div');
@@ -23,7 +23,7 @@ function navbar () {
 };
 
 content.appendChild(navbar());
-const navArr = ['home', 'about', 'contact'];
+const navArr = ['home', 'menu', 'contact'];
 createDiv(navArr, 'navbar');
 content.appendChild(home());
 

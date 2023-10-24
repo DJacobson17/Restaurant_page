@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Output Management',
@@ -11,9 +13,12 @@ module.exports = {
   ],
   devtool: 'inline-source-map',
   output: {
-    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'main.[hash:8].js',
+    sourceMapFilename: 'main.[hash:8].map',
+    chunkFilename: '[id].[hash:8].js',
     clean: true,
+    assetModuleFilename: '[name][ext]',
   },
   module: {
     rules: [
@@ -25,6 +30,10 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      }
     ],
   },
 };
