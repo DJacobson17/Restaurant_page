@@ -4,7 +4,7 @@ import Rose from './images/dr_rose_jacobson.jpeg';
 
 export default function home() {
   const element = document.createElement('div');
-  element.classList.add('main');
+  element.classList.add('homeMain');
   
   
   const title = document.createElement('div');

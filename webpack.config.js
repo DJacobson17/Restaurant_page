@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    menu: './src/menu.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -14,8 +15,8 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.[hash:8].js',
-    sourceMapFilename: 'main.[hash:8].map',
+    filename: '[name].[hash:8].js',
+    sourceMapFilename: '[name].[hash:8].map',
     chunkFilename: '[id].[hash:8].js',
     clean: true,
     assetModuleFilename: '[name][ext]',
