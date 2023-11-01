@@ -1,6 +1,7 @@
 import './styles/index_style.css';
 import home from './home.js';
 import menu from './menu.js';
+import contact from './contact.js';
 
 
 const content = document.createElement('div');
@@ -31,5 +32,5 @@ content.appendChild(navbar());
 content.appendChild(element);
 const navArr = ['home', 'menu', 'contact'];
 createDiv(navArr, 'navbar', 'tab');
-element.appendChild(menu());
+element.appendChild(contact());
 
