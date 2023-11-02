@@ -1,7 +1,7 @@
 import './styles/contact_style.css';
 import Mordor from './images/Mordor.png';
 
-export default function contact () {
+export default function contact() {
 
   const element = document.createElement('div');
   element.classList.add('contactMain');

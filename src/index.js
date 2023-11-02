@@ -19,6 +19,7 @@ function createDiv (arr, parentID, type) {
    };
 };
 
+
 function navbar () {
   const navbar = document.createElement('nav');
   navbar.id = 'navbar'
@@ -32,5 +33,20 @@ content.appendChild(navbar());
 content.appendChild(element);
 const navArr = ['home', 'menu', 'contact'];
 createDiv(navArr, 'navbar', 'tab');
-element.appendChild(contact());
+element.appendChild(home());
 
+const homeTab = document.getElementById('home');
+homeTab.addEventListener('click', () => {
+  element.firstChild.remove();
+  element.appendChild(home());
+});
+const menuTab = document.getElementById('menu');
+menuTab.addEventListener('click', () => {
+  element.firstChild.remove();
+  element.appendChild(menu());
+});
+const contactTab = document.getElementById('contact');
+contactTab.addEventListener('click', () => {
+  element.firstChild.remove();
+  element.appendChild(contact());
+});
