@@ -8,9 +8,8 @@
   src: url('../fonts/Roboto-Regular.ttf') format('ttf');
   font-weight: normal;
 }
-
 .homeMain {
-  background-image:linear-gradient(to bottom right, rgb(238, 227, 240), rgb(182, 89, 182), rgb(141, 202, 41));
+  /* background-image:linear-gradient(to bottom right, rgb(238, 227, 240), rgb(182, 89, 182), rgb(141, 202, 41)); */
   display: grid;
   width: 100%;
   height: 100vh;
@@ -23,6 +22,14 @@
     grid-template-columns: 40% 30% 30%;
     gap: 1em;
 }
+
+@media (max-width: 440px) {
+  .homeMain {
+    display: flex;
+    flex-direction: column;
+  };
+}
+
 
 .title {
   grid-area: title;
