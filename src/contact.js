@@ -16,8 +16,14 @@ export default function contact () {
   mordor.src = Mordor;
   mordor.id = 'mordor';
 
-  element.appendChild(address);
-  element.appendChild(phone);
+  const info = document.createElement('div');
+  info.classList.add('info');
+
+  
+  info.appendChild(address);
+  info.appendChild(phone);
+
+  element.appendChild(info);
   element.appendChild(mordor);
 
   return element;

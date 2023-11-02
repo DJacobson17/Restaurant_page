@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('ttf');
+  font-weight: normal;
+}
+
+.contactMain {
+  font-family: 'roboto';
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10vh 0px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2:first-child {
+  padding-left: 43px;
+  margin-bottom: 0px;
+}
+
+#mordor {
+  margin-top: 5%;
+  width: 50%;
+  height: auto;
+  padding: 10%;
+}
